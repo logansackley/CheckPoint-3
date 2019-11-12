@@ -46,6 +46,7 @@ html {
     padding: 1px;
     border: 1px solid #000000;
     background-color: #efefef;
+    
 }
 
 .middle {
@@ -79,19 +80,17 @@ html {
     margin-right: auto;
     width: 50%;
 }
-#LineUp div{
-    display:inline-block;
-}
+
 /*Not working*/
 body {
-    background-image: url("'Images/Music Notes.jpg'");
+    background-image: url('Images/MusicNotes.jpg');
 }
 .collapsible {
     background-color: #777;
     color: white;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 250px;
     border: none;
     text-align: left;
     outline: none;
@@ -107,4 +106,5 @@ body {
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+    width: 250px;
 }

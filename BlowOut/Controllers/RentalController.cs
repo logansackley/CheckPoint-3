@@ -15,8 +15,8 @@ namespace BlowOut.Controllers
             new Instrument{InstrumentID = 2,InstrumentName = "Trombone", NewPrice = 60, OldPrice = 35 },
             new Instrument{InstrumentID = 3,InstrumentName = "Tuba", NewPrice = 70, OldPrice = 50 },
             new Instrument{InstrumentID = 4,InstrumentName = "Flute", NewPrice = 40, OldPrice = 25 },
-            new Instrument{InstrumentID = 5,InstrumentName = "Trumpet", NewPrice = 35, OldPrice = 27 },
-            new Instrument{InstrumentID = 6,InstrumentName = "Trumpet", NewPrice = 42, OldPrice = 30 }
+            new Instrument{InstrumentID = 5,InstrumentName = "Clarinet", NewPrice = 35, OldPrice = 27 },
+            new Instrument{InstrumentID = 6,InstrumentName = "Saxophone", NewPrice = 42, OldPrice = 30 }
         };
         // GET: Rental
         public ActionResult Index()
