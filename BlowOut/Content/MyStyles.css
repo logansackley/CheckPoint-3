@@ -1,0 +1,110 @@
+﻿
+myFooterText {
+    font-family: 'Palatino Linotype';
+}
+#jumbotron {
+    color: aliceblue;
+}
+p{
+    text-align:center;
+    font-family: monospace;
+}
+#CursiveName{
+    font-family:Leelawadee;
+}
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+.container {
+  position: relative;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    height: 250px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+    border: 1px solid #000000;
+    background-color: #efefef;
+}
+.imagetwo {
+    height: 250px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+    border: 1px solid #000000;
+    background-color: #efefef;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+#FrontImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#LineUp div{
+    display:inline-block;
+}
+/*Not working*/
+body {
+    background-image: url("'Images/Music Notes.jpg'");
+}
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+    .active, .collapsible:hover {
+        background-color: #555;
+    }
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
