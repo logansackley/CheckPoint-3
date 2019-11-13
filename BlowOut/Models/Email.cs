@@ -10,19 +10,18 @@ namespace BlowOut.Models
     {
         [Required(ErrorMessage = "Name is required")]
         [Display(Name="Full Name")]
-        public String Name { get; set; }
+        public String name { get; set; }
 
         [EmailAddress]
         [Display(Name="Email Address")]
-        public string Smail { get; set; }
+        public string email { get; set; }
 
         [EmailAddress]
-        [Compare("Smail")]
+        [Compare("email")]
         [Display(Name= "Confirm Email")]
         public string ConfirmEmail { get; set; }
 
-        [Required]
-        public string ContactInfo { get; set; }
+  
 
     }
 }

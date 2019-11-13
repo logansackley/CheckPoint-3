@@ -2,9 +2,6 @@
 myFooterText {
     font-family: 'Palatino Linotype';
 }
-#jumbotron {
-    color: aliceblue;
-}
 p{
     text-align:center;
     font-family: monospace;
@@ -60,19 +57,19 @@ html {
   text-align: center;
 }
 
-.container:hover .image {
-  opacity: 0.3;
+#LineUp:hover .image {
+    opacity: 0.3;
+}
+#LineUp:hover .middle {
+    opacity: 1;
 }
 
-.container:hover .middle {
-  opacity: 1;
-}
 
 .text {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  padding: 16px 32px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
 }
 #FrontImage {
     display: block;
@@ -83,7 +80,7 @@ html {
 
 /*Not working*/
 body {
-    background-image: url('Images/MusicNotes.jpg');
+    background-image: url('Images/Music.jpg');
 }
 .collapsible {
     background-color: #777;
@@ -97,9 +94,9 @@ body {
     font-size: 15px;
 }
 
-    .active, .collapsible:hover {
-        background-color: #555;
-    }
+.active, .collapsible:hover {
+    background-color: #555;
+}
 
 .content {
     padding: 0 18px;
@@ -107,4 +104,36 @@ body {
     overflow: hidden;
     background-color: #f1f1f1;
     width: 250px;
+}
+footer {
+    background-color: lightgrey;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid white;
+    margin: 15px;
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+}
+#disclosure {
+    font-style: italic;
+    font-size: 6px;
+}
+#Quote {
+    font-style: italic;
+}
+#Foot {
+    color: black;
+    text-decoration:none !important;
+}
+#Foot:hover {
+    text-decoration: none !important;
+    color: black;
+}
+/*#Jumbo {
+    opacity: 0.2 !important;
+    background: none !important;
+}*/
+h3{
+    text-align:center;
 }

@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EASendMail, Version=7.5.0.3, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EASendMail.7.5.0.3\lib\net461\EASendMail.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -138,7 +141,7 @@
     <Content Include="Content\Images\BlowOutBaby.jpg" />
     <Content Include="Content\Images\clarinet.png" />
     <Content Include="Content\Images\flute.png" />
-    <Content Include="Content\Images\MusicNotes.jpg" />
+    <Content Include="Content\Images\Music.jpg" />
     <Content Include="Content\Images\Saxophone.png" />
     <Content Include="Content\Images\Trombone.jpg" />
     <Content Include="Content\Images\trumpet.png" />
@@ -172,10 +175,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Rental\Index.cshtml" />
     <Content Include="Views\Rental\Instrument.cshtml" />
+    <Content Include="Views\Contact\ThankYou.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

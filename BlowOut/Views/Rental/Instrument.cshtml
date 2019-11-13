@@ -16,112 +16,173 @@
     <h2>@Model.InstrumentName</h2>
     @if (Model.InstrumentID == 1)
     {
-    <center>
-        <img src="~/Content/Images/trumpet.png" class="imagetwo">
-        <br />
-        <button type="button" class="collapsible">New Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
-        </div>
-        <br />
-        <button type="button" class="collapsible">Old Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
-        </div>
-    </center>
+        <center>
+            <img src="~/Content/Images/trumpet.png" class="imagetwo">
+            <br />
+            <button type="button" class="collapsible">New Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Old Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+        </center>
     }
     else if (Model.InstrumentID == 2)
     {
-    <center>
-        <img src="~/Content/Images/trumpet.png" class="imagetwo">
-        <br />
-        <button type="button" class="collapsible">New Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
-        </div>
-        <br />
-        <button type="button" class="collapsible">Old Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
-        </div>
-    </center>
+        <center>
+            <img src="~/Content/Images/Trombone.jpg" class="imagetwo">
+            <br />
+            <button type="button" class="collapsible">New Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Old Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+        </center>
 
     }
     else if (Model.InstrumentID == 3)
     {
-    <center>
-        <img src="~/Content/Images/tuba.png" class="imagetwo" />
-        <br />
-        <button type="button" class="collapsible">New Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
-        </div>
-        <br />
-        <button type="button" class="collapsible">Old Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
-        </div>
-    </center>
+        <center>
+            <img src="~/Content/Images/tuba.png" class="imagetwo">
+            <br />
+            <button type="button" class="collapsible">New Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Old Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+        </center>
 
     }
     else if (Model.InstrumentID == 4)
     {
-    <center>
-        <img src="~/Content/Images/flute.png" class="imagetwo" />
-        <br />
-        <button type="button" class="collapsible">New Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
-        </div>
-        <br />
-        <button type="button" class="collapsible">Old Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
-        </div>
-    </center>
+        <center>
+            <img src="~/Content/Images/flute.png" class="imagetwo">
+            <br />
+            <button type="button" class="collapsible">New Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Old Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+        </center>
     }
     else if (Model.InstrumentID == 5)
     {
-    <center>
-        <img src="~/Content/Images/clarinet.png" class="imagetwo" />
-        <br />
-        <button type="button" class="collapsible">New Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
-        </div>
-        <br />
-        <button type="button" class="collapsible">Old Price</button>
-        <div class="content">
-            <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-            <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
-        </div>
-    </center>
+        <center>
+            <img src="~/Content/Images/clarinet.png" class="imagetwo">
+            <br />
+            <button type="button" class="collapsible">New Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Old Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+        </center>
     }
     else if (Model.InstrumentID == 6)
-    {<center>
-    <img src="~/Content/Images/Saxophone.png" class="imagetwo" />
-    <br />
-    <button type="button" class="collapsible">New Price</button>
-    <div class="content">
-        <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-        <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
-    </div>
-    <br />
-    <button type="button" class="collapsible">Old Price</button>
-    <div class="content">
-        <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
-        <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
-    </div>
-</center>
+    { 
+        <center>
+            <img src="~/Content/Images/Saxophone.png" class="imagetwo">
+            <br />
+            <button type="button" class="collapsible">New Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.NewPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            <br />
+            <button type="button" class="collapsible">Old Price</button>
+            <div class="content">
+                <p>Instrument:@Html.DisplayFor(model => model.InstrumentName)</p>
+                <p>New Price: $@Html.DisplayFor(model => model.OldPrice).00</p>
+                <p id="disclosure">
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+        </center>
     }
 
 
