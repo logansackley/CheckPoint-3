@@ -2,24 +2,45 @@
 myFooterText {
     font-family: 'Palatino Linotype';
 }
+
 p{
     text-align:center;
     font-family: monospace;
 }
+
 #CursiveName{
     font-family:Leelawadee;
 }
-html, body {
-    height: 100%;
-}
+
 
 html {
     display: table;
     margin: auto;
 }
 
+/*{
+display: flex;
+flex-wrap: wrap;
+padding-left: 0;
+}
+
+.serv ul li {
+    list-style: none;
+    flex: 0 0 33.333333%;
+}*/
+
+
+
+
 .container {
-  position: relative;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#LineUp {
+    list-style: none;
+    flex: 0 0 33.333333%;
 }
 
 .image {
@@ -29,11 +50,10 @@ html {
     backface-visibility: hidden;
     height: 250px;
     width: 250px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 1px;
     border: 1px solid #000000;
     background-color: #efefef;
+    margin: 45px;
 }
 .imagetwo {
     height: 250px;
@@ -75,12 +95,16 @@ html {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
 }
 
-/*Not working*/
+
 body {
-    background-image: url('Images/Music.jpg');
+    background: url('Images/Music.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .collapsible {
     background-color: #777;
@@ -104,7 +128,13 @@ body {
     overflow: hidden;
     background-color: #f1f1f1;
     width: 250px;
+  
 }
+
+.jumbotron {
+    padding-top: 10px;
+}
+
 footer {
     background-color: lightgrey;
     width: 300px;
@@ -114,12 +144,15 @@ footer {
     font-size: small;
     text-align: center;
     font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
 }
 #disclosure {
     font-style: italic;
-    font-size: 6px;
+    font-size: 13px;
 }
 #Quote {
+    padding-top: 40px;
     font-style: italic;
 }
 #Foot {
@@ -130,10 +163,21 @@ footer {
     text-decoration: none !important;
     color: black;
 }
-/*#Jumbo {
-    opacity: 0.2 !important;
-    background: none !important;
-}*/
-h3{
+
+h3 {
     text-align:center;
 }
+
+.mason {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.mason p {
+    font-size:20px;
+}
+

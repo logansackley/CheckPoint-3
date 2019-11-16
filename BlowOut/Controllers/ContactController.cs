@@ -39,7 +39,7 @@ namespace BlowOut.Controllers
                         oMail.Subject = "test email from gmail account";
 
                         // Set email body
-                        oMail.TextBody = "Gimme my 5 points bitch.";
+                        oMail.TextBody = "This will be for our five points extra credit!! thank you!";
 
                         // Gmail SMTP server address
                         SmtpServer oServer = new SmtpServer("smtp.gmail.com");

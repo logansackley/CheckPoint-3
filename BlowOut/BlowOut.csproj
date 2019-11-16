@@ -138,9 +138,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\BlowOutBaby.jpg" />
     <Content Include="Content\Images\clarinet.png" />
     <Content Include="Content\Images\flute.png" />
+    <Content Include="Content\Images\BlowOutBaby.jpg" />
+    <Content Include="Content\Images\ian-schneider-TamMbr4okv4-unsplash.jpg" />
     <Content Include="Content\Images\Music.jpg" />
     <Content Include="Content\Images\Saxophone.png" />
     <Content Include="Content\Images\Trombone.jpg" />
