@@ -7,6 +7,9 @@ using System.Web.Mvc;
 
 namespace BlowOut.Controllers
 {
+
+    //in this controller we are hard coding in the instruments that we offer in the website.  Thanks to what we l
+    //earned by using the key word new and then dynamically adding them with the correct data types and values crom our model
     public class RentalController : Controller
     {
         public static List<Instrument> lstInstrument = new List<Instrument>()
