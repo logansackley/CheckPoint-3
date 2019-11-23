@@ -12,9 +12,17 @@ namespace BlowOut.Models
     {
         [Key]
         public int InstrumentID { get; set; }
+
+        [Display(Name ="Instrument Name")]
         public String Description { get; set; }
+
+        [Display(Name = "New or Used")]
         public String Type { get; set; }
+
+        [Display(Name = "Price")]
         public String Price { get; set; }
-        public int ClientID { get; set; }
+
+        
+        public int? ClientID { get; set; }
     }
 }
