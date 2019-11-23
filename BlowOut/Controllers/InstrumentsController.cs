@@ -14,26 +14,55 @@ namespace BlowOut.Controllers
     public class InstrumentsController : Controller
     {
         private BlowContext db = new BlowContext();
+        public static int SaveID;
+        public static string SaveDESC;
+        public static string SaveType;
+        public static string SavePrice;
+        public static int SaveClient;
 
         // GET: Instruments
+        [HttpGet]
         public ActionResult Index()
         {
+
             return View(db.Instruments.ToList());
         }
 
         // GET: Instruments/Details/5
-        public ActionResult Details(int? id)
+      
+        public ActionResult Details(string Description)
         {
-            if (id == null)
+
+            if (Description == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Instrument instrument = db.Instruments.Find(id);
-            if (instrument == null)
+
+            IEnumerable<Instrument> FindME =
+             db.Database.SqlQuery<Instrument>(
+             "Select InstrumentID, Description, Type, " +
+             "Price, ClientID " +
+             "FROM Instrument " +
+             "WHERE Description =" + "'" + Description + "'");
+
+
+            if (FindME == null)
             {
                 return HttpNotFound();
             }
-            return View(instrument);
+            return View(FindME);
+        }
+ 
+        public ActionResult SaveInstrument(int myID, string myDESC, string myType, string myPrice, int myClient)
+        {
+            SaveID = myID;
+            SaveClient = myClient;
+            SaveDESC = myDESC;
+            SavePrice = myPrice;
+            SaveType = myType;
+
+            return RedirectToAction("Create", "Clients");
+
         }
 
         // GET: Instruments/Create
@@ -53,11 +82,13 @@ namespace BlowOut.Controllers
             {
                 db.Instruments.Add(instrument);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return View("Index");
             }
 
             return View(instrument);
         }
+
+      
 
         // GET: Instruments/Edit/5
         public ActionResult Edit(int? id)
@@ -116,13 +147,13 @@ namespace BlowOut.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
+        /*protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
+        }*/
     }
 }

@@ -14,7 +14,7 @@ namespace BlowOut.Controllers
     public class ClientsController : Controller
     {
         private BlowContext db = new BlowContext();
-
+        public static int Holder; 
         // GET: Clients
         public ActionResult Index()
         {
@@ -39,6 +39,9 @@ namespace BlowOut.Controllers
         // GET: Clients/Create
         public ActionResult Create()
         {
+            
+
+
             return View();
         }
 
@@ -49,13 +52,36 @@ namespace BlowOut.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ClientID,firstname,lastname,address,city,state,zip,email,phone")] Client client)
         {
+           
             if (ModelState.IsValid)
             {
+                db.Database.ExecuteSqlCommand(
+                    "Update Instrument " +
+                    "Set Instrument.ClientID = "  + client.ClientID + 
+                    " Where Instrument.InstrumentID = " + Holder);
+
                 db.Clients.Add(client);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Summary", client);
             }
+            
+            return View(client);
+        }
 
+        public ActionResult Summary(Client client)
+        {
+            IEnumerable<Instrument> FindME =
+                db.Database.SqlQuery<Instrument>(
+                "Select InstrumentID, Description, Type, " +
+                "Price, ClientID " +
+                "FROM Instrument " +
+                "WHERE ClientID = " + client.ClientID);
+          
+            ViewBag.Finale += InstrumentsController.SaveID;
+            ViewBag.Finale += InstrumentsController.SaveClient;
+            ViewBag.Finale += InstrumentsController.SaveDESC;
+            ViewBag.Finale += InstrumentsController.SavePrice;
+            ViewBag.Finale += InstrumentsController.SaveType;
             return View(client);
         }
 

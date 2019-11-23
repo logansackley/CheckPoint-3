@@ -1,0 +1,70 @@
+﻿@model BlowOut.Models.Client
+
+@{
+    ViewBag.Title = "Summary";
+}
+
+<h2>Summary</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.address)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.city)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.state)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.zip)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.email)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.phone)
+        </td>
+
+    </tr>
+
+
+</table>
+@foreach(var item in ViewBag.Finale)
+{
+    <p>@item</p>
+}
