@@ -53,10 +53,9 @@ namespace BlowOut.Controllers
             return View(FindME);
         }
  
-        public ActionResult SaveInstrument(int myID, string myDESC, string myType, string myPrice, int myClient)
+        public ActionResult SaveInstrument(int myID, string myDESC, string myType, string myPrice)
         {
             SaveID = myID;
-            SaveClient = myClient;
             SaveDESC = myDESC;
             SavePrice = myPrice;
             SaveType = myType;

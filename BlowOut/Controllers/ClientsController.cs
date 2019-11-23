@@ -70,10 +70,16 @@ namespace BlowOut.Controllers
 
         public ActionResult Summary(Client client)
         {
-            ViewBag.Finale += "<p> Order Number: " + InstrumentsController.SaveClient + "</p>" + "<br>";
+            
+
+            ViewBag.BangBang = int.Parse(InstrumentsController.SavePrice);
+            ViewBag.Boom = InstrumentsController.SaveDESC;
+
+            ViewBag.Finale += "<center>"+ "<p> Order Number: " + client.ClientID + "</p>" + "<br>";
             ViewBag.Finale += "<p> Order Description: " + InstrumentsController.SaveDESC + "</p>" + "<br>";
-            ViewBag.Finale += "<p> Total Price: " + InstrumentsController.SavePrice + "</p>" + "<br>";
             ViewBag.Finale += "<p> Instrument Type: " + InstrumentsController.SaveType + "</p>" + "<br>";
+            ViewBag.Finale += "<p> Monthly Rental Price: $" + InstrumentsController.SavePrice + ".00</p>" + "<br>" + "</center>";
+
             return View(client);
         }
 

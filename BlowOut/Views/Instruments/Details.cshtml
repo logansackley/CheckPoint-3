@@ -9,221 +9,235 @@
 {
     if (item.Description == "Trumpet" && item.Type == "New")
     {
+        <div class="mason jumbotron" id="Jumbo">
+            <img src="~/Content/Images/trumpet.png" class="imagetwo" width="800" height="600">
+            <br />
+            <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
+        </div>
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>New Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
 
-
-            <div class="mason">
-                    <img src="~/Content/Images/trumpet.png" class="imagetwo">
-                    <br />
-                    @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price, myClient = item.ClientID }, new { @class = "btn btn-primary btn-lg" })
-
-                    <div>
-                        <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                        <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                        <p id="disclosure">
-
-                            Disclosure:After an 18 month rental period renting party will obtain ownership of
-                            instrument. All Items returned before 3 month rental time period are subject to a $200
-                            re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                        </p>
-                    </div>
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
             </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
 
     }
 
     else if (item.Description == "Trumpet" && item.Type == "Used")
     {
-        <div class="mason">
-            <br />
-            @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-
+        <div class="mason jumbotron" id="Jumbo">
             <div>
-                <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                <p>New Price: @Html.DisplayFor(model => item.Price)</p>
+                <p>Used Price: $@Html.DisplayFor(model => item.Price).00</p>
                 <p id="disclosure">
+
                     Disclosure:After an 18 month rental period renting party will obtain ownership of
                     instrument. All Items returned before 3 month rental time period are subject to a $200
                     re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
                 </p>
             </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
         </div>
     }
 
     else if (item.Description == "Trombone" && item.Type == "New")
     {
-        <div class="mason">
-                <img src="~/Content/Images/Trombone.jpg" class="imagetwo" />
-                <br />
-                @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-                <div>
-
-                    <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                    <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                    <p id="disclosure">
-
-                        Disclosure:After an 18 month rental period renting party will obtain ownership of
-                        instrument. All Items returned before 3 month rental time period are subject to a $200
-                        re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                    </p>
-
-                </div>
+        <div class="mason jumbotron" id="Jumbo">
+            <img src="~/Content/Images/Trombone.jpg" class="imagetwo" width="800" height="600">
+            <br />
+            <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
         </div>
-    }
-
-    else if (item.Description == "Trombone" && item.Type == "Used")
-    {
-        <div class="mason">
-
-            < br/>
-            @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-                <div>
-                    < p > Instrument:@Html.DisplayFor(model => item.Description) </ p >
-                    < p > New Price: @Html.DisplayFor(model => item.Price) </ p >
-
-                    < p id = "disclosure" >
-                    Disclosure:After an 18 month rental period renting party will obtain ownership of
-                    instrument.All Items returned before 3 month rental time period are subject to a $200
-                    re - stocking fee.Rental returns before 18 months will forfeit any equity in instrument.
-                    </ p >
-                </div >
-        </div>
-
-
-        }
-
-        else if (item.Description == "Tuba" && item.Type == "New")
-        {
-            <div class="mason">
-
-                <img src="~/Content/Images/tuba.png" class="imagetwo" />
-                <br />
-                @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-                <div>
-
-                    <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                    <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                    <p id="disclosure">
-
-                        Disclosure:After an 18 month rental period renting party will obtain ownership of
-                        instrument. All Items returned before 3 month rental time period are subject to a $200
-                        re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                    </p>
-                </div>
-            </div>
-        }
-
-        else if (item.Description == "Tuba" && item.Type == "Used")
-
-        {
-           <div class="mason">
-                <br />
-                @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-                <div>
-                    <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                    <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                    <p id="disclosure">
-                        Disclosure:After an 18 month rental period renting party will obtain ownership of
-                        instrument. All Items returned before 3 month rental time period are subject to a $200
-                        re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                    </p>
-                </div>
-            </div>
-
-        }
-        else if (item.Description == "Flute" && item.Type == "New")
-        {
-            <div class="mason">
-                <img src="~/Content/Images/flute.png" class="imagetwo" />
-                <br />
-                @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-
-                    <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                    <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                    <p id="disclosure">
-
-                        Disclosure:After an 18 month rental period renting party will obtain ownership of
-                        instrument. All Items returned before 3 month rental time period are subject to a $200
-                        re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                    </p>
-
-           </div>
-        }
-        else if (item.Description == "Flute" && item.Type == "Used")
-        {
-           <div class="mason">
-
-                   <br />
-                    @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-                    <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                    <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                    <p id="disclosure">
-                        Disclosure:After an 18 month rental period renting party will obtain ownership of
-                        instrument. All Items returned before 3 month rental time period are subject to a $200
-                        re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                    </p>
-
-            </div>
-        }
-        else if (item.Description == "Clarinet" && item.Type == "New")
-        {
-            <div class="mason">
-
-                <img src="~/Content/Images/clarinet.png" class="imagetwo" />
-                <br />
-                @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-                    <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                    <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                    <p id="disclosure">
-                        Disclosure:After an 18 month rental period renting party will obtain ownership of
-                        instrument. All Items returned before 3 month rental time period are subject to a $200
-                        re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                    </p>
-            </div>
-        }
-        else if (item.Description == "Clarinet" && item.Type == "Used")
-        {
-            <div class="mason">
-            < br />
-            @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-            <p> Instrument:@Html.DisplayFor(model => item.Description) </p>
-            <p> New Price: @Html.DisplayFor(model => item.Price) </p>
-                <p id = "disclosure" >
-                Disclosure:After an 18 month rental period renting party will obtain ownership of
-                instrument.All Items returned before 3 month rental time period are subject to a $200
-                re - stocking fee.Rental returns before 18 months will forfeit any equity in instrument.
-                </p>
-            </div>
-        }
-        else if (item.Description == "Saxophone" && item.Type == "New")
-        {
-            <div class="mason">
-                    <img src="~/Content/Images/Saxophone.png" class="imagetwo" />
-                    <br />
-                    @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-
-                    <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
-                    <p>New Price: @Html.DisplayFor(model => item.Price)</p>
-                    <p id="disclosure">
-
-                        Disclosure:After an 18 month rental period renting party will obtain ownership of
-                        instrument. All Items returned before 3 month rental time period are subject to a $200
-                        re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
-                    </p>
-            </div>
-        }
-        else if (item.Description == "Saxophone" && item.Type == "Used")
-        {
-            <div class="mason">
-                <br />
-                @Html.ActionLink("Submit", "SaveInstrument", new { myID = item.InstrumentID }, new { @class = "btn btn-primary btn-lg" })
-                <p>New Price: @Html.DisplayFor(model => item.Price)</p>
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>New Price: $@Html.DisplayFor(model => item.Price).00</p>
                 <p id="disclosure">
+
                     Disclosure:After an 18 month rental period renting party will obtain ownership of
                     instrument. All Items returned before 3 month rental time period are subject to a $200
                     re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
                 </p>
             </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+    }
 
-        }
-    
+    else if (item.Description == "Trombone" && item.Type == "Used")
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>Used Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+
+
+    }
+
+    else if (item.Description == "Tuba" && item.Type == "New")
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <img src="~/Content/Images/tuba.png" class="imagetwo" width="800" height="600">
+            <br />
+            <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
+        </div>
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>New Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+    }
+
+    else if (item.Description == "Tuba" && item.Type == "Used")
+
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>Used Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+
+    }
+
+    else if (item.Description == "Flute" && item.Type == "New")
+
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <img src="~/Content/Images/flute.png" class="imagetwo" width="800" height="600">
+            <br />
+            <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
+        </div>
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>New Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+
+    }
+
+    else if (item.Description == "Flute" && item.Type == "Used")
+
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>Used Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+
+    }
+
+    else if (item.Description == "Clarinet" && item.Type == "New")
+
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <img src="~/Content/Images/clarinet.png" class="imagetwo" width="800" height="600">
+            <br />
+            <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
+        </div>
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>New Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+    }
+
+    else if (item.Description == "Clarinet" && item.Type == "Used")
+
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>Used Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+    }
+    else if (item.Description == "Saxophone" && item.Type == "New")
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <img src="~/Content/Images/Saxophone.png" class="imagetwo">
+            <br />
+            <p>Instrument:@Html.DisplayFor(model => item.Description)</p>
+        </div>
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>New Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+    }
+    else if (item.Description == "Saxophone" && item.Type == "Used")
+    {
+        <div class="mason jumbotron" id="Jumbo">
+            <div>
+                <p>Used Price: $@Html.DisplayFor(model => item.Price).00</p>
+                <p id="disclosure">
+
+                    Disclosure:After an 18 month rental period renting party will obtain ownership of
+                    instrument. All Items returned before 3 month rental time period are subject to a $200
+                    re-stocking fee. Rental returns before 18 months will forfeit any equity in instrument.
+                </p>
+            </div>
+            @Html.ActionLink("Purchase", "SaveInstrument", new { myID = item.InstrumentID, myDESC = item.Description, myType = item.Type, myPrice = item.Price }, new { @class = "btn btn-primary btn-lg" })
+        </div>
+
+    }
+
 
 }
