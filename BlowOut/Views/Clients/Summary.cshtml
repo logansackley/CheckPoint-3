@@ -1,0 +1,67 @@
+﻿@model BlowOut.Models.Client
+
+@{
+    ViewBag.Title = "Summary";
+}
+<!--After you store the client information and update the instrument table, you will then display a view that will be a Summary view. This should
+    display a message thanking the customer by name for the order/rental and displaying the "order/rental" info including the orderID 
+    (use the client ID for this for now), instrument info, type (new or used), instrument description and image, the monthly price, and the total amount paid after 18 months.-->
+<h2>Summary</h2>
+
+<center>
+    <fieldset>
+        <legend>Order Details</legend>
+
+        <h4>Thank you  @Html.DisplayFor(model => model.firstname), for your purchase. Your order details are listed below.</h4>
+        <br />
+        @foreach (var item in ViewBag.Finale)
+        {
+            @Html.Raw(item)
+        }
+
+        @if (ViewBag.Boom == "Trumpet")
+        {
+        <div>
+            <img src="~/Content/Images/trumpet.png" />
+        </div>
+
+        }
+        else if (ViewBag.Boom == "Trombone")
+        {
+            <div>
+                <img src="~/Content/Images/Trombone.jpg" />
+            </div>
+        }
+        else if (ViewBag.Boom == "Tuba")
+        {
+            <div>
+                <img src="~/Content/Images/tuba.png" />
+            </div>
+        }
+        else if (ViewBag.Boom == "Flute")
+        {
+            <div>
+                <img src="~/Content/Images/flute.png" />
+            </div>
+        }
+        else if (ViewBag.Boom == "Clarinet")
+        {
+            <div>
+                <img src="~/Content/Images/clarinet.png" />
+            </div>
+
+        }
+        else if (ViewBag.Boom == "Saxophone")
+        {
+            <div>
+                <img src="~/Content/Images/Saxophone.png" />
+            </div>
+        }
+
+
+
+        <p>Total cost over 18 month period: $@(ViewBag.BangBang * 18).00</p>
+    </fieldset>
+</center>
+
+

@@ -14,7 +14,7 @@ namespace BlowOut.Controllers
     public class ClientsController : Controller
     {
         private BlowContext db = new BlowContext();
-
+        public static int Holder; 
         // GET: Clients
         public ActionResult Index()
         {
@@ -39,6 +39,9 @@ namespace BlowOut.Controllers
         // GET: Clients/Create
         public ActionResult Create()
         {
+            
+
+
             return View();
         }
 
@@ -49,12 +52,33 @@ namespace BlowOut.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ClientID,firstname,lastname,address,city,state,zip,email,phone")] Client client)
         {
+           
             if (ModelState.IsValid)
             {
+                db.Database.ExecuteSqlCommand(
+                    "Update Instrument " +
+                    "Set Instrument.ClientID = "  + client.ClientID + 
+                    " Where Instrument.InstrumentID = " + Holder);
+
                 db.Clients.Add(client);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Summary", client);
             }
+            
+            return View(client);
+        }
+
+        public ActionResult Summary(Client client)
+        {
+            
+
+            ViewBag.BangBang = int.Parse(InstrumentsController.SavePrice);
+            ViewBag.Boom = InstrumentsController.SaveDESC;
+
+            ViewBag.Finale += "<center>"+ "<p> Order Number: " + client.ClientID + "</p>" + "<br>";
+            ViewBag.Finale += "<p> Order Description: " + InstrumentsController.SaveDESC + "</p>" + "<br>";
+            ViewBag.Finale += "<p> Instrument Type: " + InstrumentsController.SaveType + "</p>" + "<br>";
+            ViewBag.Finale += "<p> Monthly Rental Price: $" + InstrumentsController.SavePrice + ".00</p>" + "<br>" + "</center>";
 
             return View(client);
         }

@@ -6,46 +6,84 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ClientID)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClientID)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.InstrumentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.InstrumentID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.InstrumentID })
-        </td>
-    </tr>
-}
+<link rel="stylesheet" type="text/css" href="~/Content/MyStyles.css" />
+<h2></h2>
+
+<body>
+
+    <div class="container" id="LineUp">
+        <a href="@Url.Action("Details", "Instruments", new { Description = "Trumpet" })">
+            <img src="~/Content/Images/trumpet.png" class="image">
+            <div class="middle">
+                <div class="text">
+                    Trumpet
+                </div>
+                <a />
+            </div>
+
+    </div>
+    <br />
+    <div class="container" id="LineUp">
+        <a href="@Url.Action("Details", "Instruments", new { Description = "Trombone"})">
+            <img src="~/Content/Images/Trombone.jpg" class="image" />
+            <div class="middle">
+                <div class="text">
+                    Trombone
+                </div>
+                <a />
+            </div>
+
+    </div>
+    <br />
+    <div class="container" id="LineUp">
+        <a href="@Url.Action("Details", "Instruments", new {Description = "Tuba"})">
+            <img src="~/Content/Images/tuba.png" class="image" />
+            <div class="middle">
+                <div class="text">
+                    Tuba
+                </div>
+                <a />
+            </div>
+
+    </div>
+    <br />
+    <div class="container" id="LineUp">
+        <a href="@Url.Action("Details", "Instruments", new { Description = "Flute" })">
+            <img src="~/Content/Images/flute.png" class="image" />
+            <div class="middle">
+                <div class="text">
+                    Flute
+                </div>
+                <a />
+            </div>
+
+    </div>
+    <br />
+
+    <div class="container" id="LineUp">
+        <a href="@Url.Action("Details", "Instruments", new {Description = "Clarinet" })">
+            <img src="~/Content/Images/clarinet.png" class="image" />
+            <div class="middle">
+                <div class="text">
+                    Clarinet
+                </div>
+                <a />
+            </div>
+
+    </div>
+    <br />
+    <div class="container" id="LineUp">
+        <a href="@Url.Action("Details", "Instruments", new {Description = "Saxophone" })">
+            <img src="~/Content/Images/Saxophone.png" class="image" />
+            <div class="middle">
+                <div class="text">
+                    Saxophone
+                </div>
+                <a />
+            </div>
+
+    </div>
+</body>
 
 </table>
