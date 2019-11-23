@@ -70,18 +70,10 @@ namespace BlowOut.Controllers
 
         public ActionResult Summary(Client client)
         {
-            IEnumerable<Instrument> FindME =
-                db.Database.SqlQuery<Instrument>(
-                "Select InstrumentID, Description, Type, " +
-                "Price, ClientID " +
-                "FROM Instrument " +
-                "WHERE ClientID = " + client.ClientID);
-          
-            ViewBag.Finale += InstrumentsController.SaveID;
-            ViewBag.Finale += InstrumentsController.SaveClient;
-            ViewBag.Finale += InstrumentsController.SaveDESC;
-            ViewBag.Finale += InstrumentsController.SavePrice;
-            ViewBag.Finale += InstrumentsController.SaveType;
+            ViewBag.Finale += "<p> Order Number: " + InstrumentsController.SaveClient + "</p>" + "<br>";
+            ViewBag.Finale += "<p> Order Description: " + InstrumentsController.SaveDESC + "</p>" + "<br>";
+            ViewBag.Finale += "<p> Total Price: " + InstrumentsController.SavePrice + "</p>" + "<br>";
+            ViewBag.Finale += "<p> Instrument Type: " + InstrumentsController.SaveType + "</p>" + "<br>";
             return View(client);
         }
 
