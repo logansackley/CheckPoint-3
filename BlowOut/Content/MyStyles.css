@@ -32,7 +32,7 @@ padding-left: 0;
 
 
 
-.container {
+/*.container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -41,7 +41,7 @@ padding-left: 0;
 #LineUp {
     list-style: none;
     flex: 0 0 33.333333%;
-}
+}*/
 
 .image {
     opacity: 1;
@@ -106,6 +106,12 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.spaceEven {
+    display: flex;
+    justify-content: space-between;
+}
+
 .collapsible {
     background-color: #777;
     color: white;
