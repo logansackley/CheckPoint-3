@@ -31,11 +31,13 @@ padding-left: 0;
 
 
 
-
 .container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 #LineUp {
@@ -89,7 +91,7 @@ padding-left: 0;
     background-color: white;
     color: black;
     font-size: 16px;
-    padding: 16px 32px;
+    /*padding: 16px 32px;*/
 }
 #FrontImage {
     display: block;
