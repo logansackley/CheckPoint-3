@@ -52,14 +52,10 @@ namespace BlowOut.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ClientID,firstname,lastname,address,city,state,zip,email,phone")] Client client)
         {
+            Holder = InstrumentsController.SaveID;
            
             if (ModelState.IsValid)
-            {
-                db.Database.ExecuteSqlCommand(
-                    "Update Instrument " +
-                    "Set Instrument.ClientID = "  + client.ClientID + 
-                    " Where Instrument.InstrumentID = " + Holder);
-
+            {             
                 db.Clients.Add(client);
                 db.SaveChanges();
                 return RedirectToAction("Summary", client);
@@ -70,7 +66,26 @@ namespace BlowOut.Controllers
 
         public ActionResult Summary(Client client)
         {
-            
+            db.Database.ExecuteSqlCommand(
+                  "Update Instrument " +
+                  "Set Instrument.ClientID = " + client.ClientID +
+                  " Where Instrument.InstrumentID = " + Holder);
+            db.SaveChanges();
+
+            if (ViewBag.Finale != null)
+            {
+                ViewBag.Finale.clear();
+            }
+            if (ViewBag.BangBang != null)
+            {
+                ViewBag.BangBang.clear();
+            }
+
+            if (ViewBag.Boom != null)
+            {
+                ViewBag.Boom.clear();
+            }
+           
 
             ViewBag.BangBang = int.Parse(InstrumentsController.SavePrice);
             ViewBag.Boom = InstrumentsController.SaveDESC;
